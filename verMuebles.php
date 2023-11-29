@@ -26,11 +26,7 @@
             <div class="modal-body">
                       <div class="container-fluid">
 
-                      <div class="row">
-                          <div class="col-md-3 ms-auto"><p><strong>Imagen: </strong> </p></div>
-                          <div class="col-md-9 ms-auto"><p> <?php echo $fila['designacion']; ?></p></div>
-                        </div>
-                        <hr>
+                     
 
 
 
@@ -38,6 +34,12 @@
                         <div class="row">
                           <div class="col-md-3 ms-auto"><p><strong>Designacion: </strong> </p></div>
                           <div class="col-md-9 ms-auto"><p> <?php echo $fila['designacion']; ?></p></div>
+                        </div>
+                        <hr>
+
+                        <div class="row">
+                          <div class="col-md-3 ms-auto"><p><strong>Imagen: </strong> </p></div>
+                          <div class="col-md-9 ms-auto"><p> <?php if ($fila['nomImg']) {echo '<img src="./imagenes/'.$fila['nomImg'].'" alt="" srcset="">'; } else { echo 'Imagen no encontrada';} ?> </p></div>
                         </div>
                         <hr>
 
