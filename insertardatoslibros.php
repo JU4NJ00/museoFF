@@ -2,6 +2,13 @@
 
 session_start();
 
+if(isset($_SESSION["dniadmin"])){
+
+}else{
+ if(isset($_SESSION["dniencargado"])){
+	
+ }else {header("location:index.php");}}
+
 // Conexion a la Base de Datos Biblioteca 
 require_once "conexion.php";
 
@@ -17,7 +24,7 @@ if (!empty(basename($_FILES['archivo']['name']))) {
     // Verifica si el archivo subido es una imagen
     if (getimagesize($temporal) !== false) {
         // Si el archivo es una imagen, continúa con el proceso
-        $ruta = './imagenes/';
+        $ruta = './imagenes2/';
         $nombrearchivo = basename($_FILES['archivo']['name']);
         $destino = $ruta . $nombrearchivo;
 

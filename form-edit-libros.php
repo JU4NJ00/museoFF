@@ -59,6 +59,9 @@ $fila=mysqli_fetch_array($result);
   
   <input type="hidden" class="form-control" name="categoria2" id="categoria2" value="<?php echo $fila['categorialibro_idcategorias'];?>">
 
+  <?php if ($fila['nomImg'] != ""){ ?>
+  <input type="hidden" class="form-control" name="img" id="img" value="<?php echo $fila['nomImg'];?>">
+<?php } ?>
   <div class="col-sm-6">
     <label for="autor" class="form-label"> Autor</label>
     <input type="text" class="form-control" name="autor" id="autor" placeholder="Ingresar el autor" value="<?php echo $fila['autor']; ?>" >
@@ -70,13 +73,20 @@ $fila=mysqli_fetch_array($result);
 
   <div class="col-sm-6 mb-3">
     <label for="nombre" class="form-label">Imagen</label>
-    <?php if ($fila['nomImg']) { ?>
-        <img src="./imagenes/<?php echo $fila['nomImg']; ?>" alt="Imagen existente" class="img-thumbnail">
+    <?php if ($fila['nomImg'] != "") { ?>
+        <!-- Mostrar la imagen existente -->
+        <img src="./imagenes2/<?php echo $fila['nomImg']; ?>" alt="Imagen existente" class="img-thumbnail">
+        <!-- Campo oculto para almacenar la ruta de la imagen existente -->
+        <input type="hidden" name="archivo" id="archivo" value="./imagenes2/<?php echo $fila['nomImg']; ?>">
     <?php } else { ?>
-        <b>no encontrada</b>
+        <b>No encontrada</b>
+        <!-- Input de archivo para subir una nueva imagen -->
+        <input type="file" class="form-control" name="archivo" id="archivo" placeholder="Subir imagen" accept="image/*">
     <?php } ?>
-    <input type="file" class="form-control" name="imagen" id="imagen" placeholder="Subir imagen">
 </div>
+
+
+
 
 
   <div class="col-sm-6 mb-3">

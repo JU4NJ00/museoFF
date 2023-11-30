@@ -71,6 +71,20 @@ $fila2=mysqli_fetch_array($result2);
     <input type="text" class="form-control" name="designacion" id="designacion" placeholder="Ingresa tu Nombre" value="<?php echo $fila['designacion']; ?>" >
   </div>
 
+  <div class="col-sm-6 mb-3">
+    <label for="nombre" class="form-label">Imagen</label>
+    <?php if ($fila['nomImg'] != "") { ?>
+        <!-- Mostrar la imagen existente -->
+        <img src="./imagenes2/<?php echo $fila['nomImg']; ?>" alt="Imagen existente" class="img-thumbnail">
+        <!-- Campo oculto para almacenar la ruta de la imagen existente -->
+        <input type="hidden" name="archivo" id="archivo" value="./imagenes2/<?php echo $fila['nomImg']; ?>">
+    <?php } else { ?>
+        <b>No encontrada</b>
+        <!-- Input de archivo para subir una nueva imagen -->
+        <input type="file" class="form-control" name="archivo" id="archivo" placeholder="Subir imagen" accept="image/*">
+    <?php } ?>
+</div>
+
 
   <div class="col-sm-6 mb-3">
   <label for="modoadquisicion" class="form-label">Modo de adquisicion</label>

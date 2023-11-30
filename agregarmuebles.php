@@ -34,11 +34,16 @@ $result=mysqli_query($conex,$sql);
   <div class="btn btn-danger btn-sm"> <a class="text-decoration-none text-white" href="inventariomuebles.php">Cancelar</a></div>
 </div>
   	
-  <form class="row g-3" action="insertardatosmuebles.php" method="post">
+  <form class="row g-3" action="insertardatosmuebles.php" method="post" enctype="multipart/form-data">
   
   <div class="col-sm-6">
     <label for="designacion" class="form-label">Designacion</label>
     <input type="text" class="form-control" name="designacion" id="designacion" placeholder="Designacion" required>
+  </div>
+
+  <div class="col-sm-6">
+    <label for="imagen" class="form-label">Imagen</label>
+    <input type="file" class="form-control" name="archivo" id="archivo" >
   </div>
 
 <div class="col-sm-6 mb-3">

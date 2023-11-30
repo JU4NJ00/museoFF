@@ -34,7 +34,7 @@ if ($row = mysqli_fetch_assoc($result_select)) {
 
         // Elimina el archivo de imagen de la carpeta
         if (!empty($nomImg) && file_exists("./imagenes/$nomImg")) {
-            unlink("./imagenes/$nomImg");
+            unlink("./imagenes2/$nomImg");
         }
     } else {
         // En caso de que no se haya enviado ninguna acción válida
