@@ -128,11 +128,17 @@
 
 
         
-            <div id="divA" class= "mt-2  border rounded p-1">
-           <span>
-              <?php echo $_SESSION["nomadmin"];?>
-          </span>
-          </div>
+        <div id="divA" class="">
+    <li class="nav-item ">
+        <a class="nav-link" href="perfil.php">
+            <i class="fas fa-user me-2"></i> <!-- Icono de persona con un espacio a la derecha (margin end) -->
+            <?php echo $_SESSION["nomadmin"]; ?>
+        </a>
+        
+    </li>
+</div>
+
+
       
         <li class="nav-item pt-1">
           <a class="nav-link" href="salir.php">Cerrar sesion</a>
@@ -168,16 +174,18 @@
 </ul>
     <!--  -->
 
-         <ul class="navbar-nav ms-auto">
-            <div id="divE" class= "mt-2  border rounded p-1">
-           <span>
-              <?php echo $_SESSION['nomencargado'];?>
-          </span>
-          </div>
-          <li class="nav-item pt-1">
-          <a class="nav-link" href="salir.php">Cerrar sesion</a>
-        </li>
-          </ul>
+    <ul class="navbar-nav ms-auto">
+    <div id="divE" class="mt-2 border rounded p-1">
+        <span>
+            <i class="fas fa-user"></i> <!-- Icono de persona -->
+            <?php echo $_SESSION['nomencargado']; ?>
+        </span>
+    </div>
+    <li class="nav-item pt-1">
+        <a class="nav-link" href="salir.php">Cerrar sesión</a>
+    </li>
+</ul>
+
           <?php
          }}
           ?>

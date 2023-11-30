@@ -21,6 +21,7 @@
     <!-- *** Enlace SASS *** -->
 
     <link rel="stylesheet" href="./sass/principal.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" crossorigin="anonymous" />
 
      <!-- *** Enlace Google Font texto de la página *** -->
 
