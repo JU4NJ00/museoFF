@@ -82,7 +82,13 @@
             ?>
         <ul class="navbar-nav">
             <li class="nav-item pt-1">
-              <a class="nav-link" href="listado.php">Usuarios</a>
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Usuarios
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="listado.php">Lista de Usuarios</a></li>
+            <li><a class="dropdown-item" href="listado_seguimientoM.php">Lista de Seguimiento</a></li>            
+          </ul>
             </li>
 
             <li class="nav-item pt-1">
@@ -131,7 +137,7 @@
         <div id="divA" class="">
     <li class="nav-item ">
         <a class="nav-link" href="perfil.php">
-            <i class="fas fa-user me-2"></i> <!-- Icono de persona con un espacio a la derecha (margin end) -->
+            <i class="fas fa-user me-2"></i> 
             <?php echo $_SESSION["nomadmin"]; ?>
         </a>
         
@@ -175,12 +181,15 @@
     <!--  -->
 
     <ul class="navbar-nav ms-auto">
-    <div id="divE" class="mt-2 border rounded p-1">
-        <span>
-            <i class="fas fa-user"></i> <!-- Icono de persona -->
-            <?php echo $_SESSION['nomencargado']; ?>
-        </span>
-    </div>
+    <div id="divA" class="">
+    <li class="nav-item ">
+        <a class="nav-link" href="perfil.php">
+            <i class="fas fa-user me-2"></i> 
+            <?php echo $_SESSION["nomencargado"]; ?>
+        </a>
+        
+    </li>
+</div>
     <li class="nav-item pt-1">
         <a class="nav-link" href="salir.php">Cerrar sesión</a>
     </li>
@@ -194,5 +203,3 @@
       </nav>       
   
 </header>
-    
-    
